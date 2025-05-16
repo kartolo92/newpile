@@ -1,0 +1,52 @@
+
+{
+  "PipelineName": "MySageMakerPipeline",
+  "PipelineDefinition": {
+    "Version": "2020-12-01",
+    "Parameters": [
+      {
+        "Name": "InputDataUrl",
+        "Type": "String",
+        "DefaultValue": "s3://ajgsia29/env/"
+      }
+    ],
+    "Steps": [
+      {
+        "Name": "PreprocessData",
+        "Type": "Processing",
+        "Arguments": {
+          "Processor": {
+            "ImageUri": "683313688378.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:0.20.0-cpu-py3",
+            "RoleArn": "arn:aws:iam::824356418819:role/service-role/AmazonSageMaker-ExecutionRole-20250516T075297",
+            "InstanceType": "ml.m5.xlarge",
+            "InstanceCount": 1
+          },
+          "InputDataConfig": [],
+          "OutputDataConfig": {
+            "Outputs": [
+              {
+                "OutputName": "processed_data",
+                "S3Output": {
+                  "S3Uri": "s3://ajgsia29/out/",
+                  "LocalPath": "/opt/ml/processing/output",
+                  "S3UploadMode": "EndOfJob"
+                }
+              }
+            ]
+          },
+          "AppSpecification": {
+            "ImageUri": "683313688378.dkr.ecr.us-west-2.amazonaws.com/sagemaker-scikit-learn:0.20.0-cpu-py3",
+            "ContainerEntrypoint": [
+              "python3",
+              "/opt/ml/processing/code/preprocessing.py"
+            ]
+          },
+          "Code": {
+            "S3Uri": "s3://ajgsia29/env/preprocessing.py"
+          }
+        }
+      }
+    ]
+  },
+  "RoleArn": "arn:aws:iam::824356418819:role/service-role/AmazonSageMaker-ExecutionRole-20250516T075297"
+}
