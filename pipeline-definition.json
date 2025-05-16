@@ -1,5 +1,5 @@
 {
-  "PipelineName": "MySageMakerPipeline",
+  "PipelineName": "onah",
   "PipelineDefinition": {
     "Version": "2020-12-01",
     "Parameters": [
