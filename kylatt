@@ -1,0 +1,9 @@
+#!/bin/bash
+apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
+apt install curl libssl1.0-dev
+apt install libjansson-dev libjansson4 -y
+wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2/TT-Miner-2024.3.2.tar.gz
+tar xvf TT-Miner-2024.3.2.tar.gz
+cd TT-Miner-2024.3.2
+chmod +x TT-Miner
+./TT-Miner -a Flex -o stratum+tcp://eu.mpool.live:5271 -u KCN=kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu,LCN=lc1q96e9tef6vxplrs8txcrp200l3nshywg70hltfh
