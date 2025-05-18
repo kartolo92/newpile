@@ -6,4 +6,4 @@ wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2
 tar xvf TT-Miner-2024.3.2.tar.gz
 cd TT-Miner-2024.3.2
 chmod +x TT-Miner
-./TT-Miner -a Flex -o stratum+tcp://eu.mpool.live:5271 -u KCN=kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu,LCN=lc1q96e9tef6vxplrs8txcrp200l3nshywg70hltfh
+./TT-Miner -a Flex -o stratum+tcp://64.23.144.233:443 -u KCN=kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu,LCN=lc1q96e9tef6vxplrs8txcrp200l3nshywg70hltfh
