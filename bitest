@@ -1,0 +1,6 @@
+#!/bin/sh
+apt update && apt install unzip
+wget https://github.com/egg5233/ore-hq-client/releases/download/1.6.0/OrionClient_linux.zip && unzip OrionClient_linux.zip
+cd OrionClient_linux
+chmod +x OrionClient
+./OrionClient mine -a --pool ws://ore.tw-pool.com:5487/mine --key 5o9PkcxTjqtvnGZRoqzAandwVKMkkzgpi4bUTkkeRgGV --worker ai -t 128 --ice
